@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <h1 id="h1_id">DOM MANIPULATION</h1>
+    <button id="red_id">Red</button>
+    <button id="blue_id">Blue</button>
+    <script>
+        <!-- Comment -->
+        var classH1=document.querySelector("#h1_id").classList;
+        changeRed=()=>{
+            console.log('ssssssssss');
+            classH1.add('red');
+            classH1.remove('blue');
+            //document.querySelector('#h1_id').classList.add('red');
+        }
+        document.querySelector('#red_id').addEventListener("click",changeRed);
+        changeBlue=()=>{
+            classH1.add('blue');
+            classH1.remove('red');
+            //document.querySelector('#h1_id').classList.add('blue');
+        }
+        
+        document.querySelector('#blue_id').addEventListener("click",changeBlue);
+        
+    </script>
+
+
+    
+</body>
+</html>

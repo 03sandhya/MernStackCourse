@@ -1,0 +1,69 @@
+      .div1 h1{
+        background-color: aqua;
+       }
+       .div2 h1{
+        background-color: blueviolet;
+       }
+       h2{
+        color: red;
+       }
+       .s2 h2{
+        color: darkorange;
+       }.menu{
+        display:flex;
+        flex-direction: row;
+        
+       }
+       .menu li{
+        margin: 10px;
+        list-style-type: none;
+       }
+       .active{
+        background-color: aqua;
+       }
+       .align{
+        text-align: center;
+       }
+       .main {
+        display: flex;
+        flex-direction: row;
+       }
+       .main div{
+        height: 20vh;
+        width:25%;
+        border: 1px solid #000;
+       }
+       .main pic{
+        height: 50px;
+        width: 50px;
+       }
+       @media  (max-width:600px) {
+        .menu{
+            flex-direction: row;
+        }
+        body{
+            background-color:red;
+        
+        }
+    }
+        @media  (max-width:600px) {
+            .main{
+                flex-direction: column;
+                display: none;
+            }
+        
+        body{
+            background-color: blue;
+        
+        }
+        
+       }
+       a:hover{
+        color: greenyellow;
+        text-decoration: none;
+       }
+       .div input {
+        text-align: center;
+        color: brown;
+       }
+    
