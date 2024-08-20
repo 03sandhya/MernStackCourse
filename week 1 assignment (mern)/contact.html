@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Cambria;
+    background-color: #eaeee7;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+        div {
+            text-align: left;
+            
+            border-radius: 10px;
+            background-color:rgb(140, 211, 233);
+            padding: 20px;
+            width: 300px;
+            height:fit-content;
+            
+    
+        }
+        div input{
+            
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <h2 style="text-align:center">Contact Us </h2>
+        <label for="name">Name</label><br><br>
+        <input type="text"   name="username"  placeholder="Enter your name" required><br><br>
+        <label for="phno">PhoneNumber</label><br><br>
+        <input type="number" id="no" name="phno"  placeholder="Enter your mobile Number" required><br><br>
+        <label for="mail">EmailId</label><br><br>
+        <input type="email" id="mail" name="mail"  placeholder="Enter your mailId" required><br><br>
+        <label for="msg">Message Us</label><br><br>
+        <textarea id="msg" cols="26" rows="6"></textarea><br><br>
+        <button style="margin: 10px;border-radius: 5px; 
+        border:none;background-color: salmon;padding: 10px; width: 30%;color: white;margin-left: 80px;">Send</button>
+    </div>
+</body>
+</html>

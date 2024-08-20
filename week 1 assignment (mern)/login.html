@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="login-card" >
+        <h2>Login</h2>
+        
+            <div class="form-group">
+               <label for="username">Username</label>
+                <input type="email" id="username" name="username"  placeholder="Enter your mailId" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button  class="login-btn" onclick="loginapi()">Login</button>
+            <p class="register-link">Not registered yet? <a href="register.html">Create an account</a></p>
+        
+    </div>
+    <script>
+        async function loginapi (){
+    
+            let name=document.getElementById("username").value;
+            let pass=document.getElementById("password").value;
+            console.log(name);
+            console.log(pass);
+            let data={"username": name,"password": pass};
+            let res=await fetch ("https://reqres.in/api/users",{"method":"POST",body:JSON.stringify(data),
+        headers:{"content-type":"application/json"}  });
+        
+        let json=await res.json();
+        console.log(json);
+        console.log(res);
+        
+        }
+       
+    </script>
+</body>
+</html>

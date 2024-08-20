@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    
+</head>
+<body>
+    <div style="text-align: center;"><br><br>
+       
+            <label for="input" >Enter a value </label>
+            <input type="text" id="input" name="input"><br><br>
+            <button class="but1" onclick="addarray()" style="background-color: royalblue;color: aliceblue;">AddToArray</button>
+        
+       
+    </div>
+    <script>
+        let arr1=[];
+        function addarray(){
+            
+            let val=document.getElementById("input").value;
+            arr1.push(val);
+            console.log('ARRAY VALUES ARE ',arr1);
+            
+          }
+          // you can also use--> document.querySelector(".but1").addEventListener("click",addarray);
+        
+    </script>
+    
+</body>
+</html>

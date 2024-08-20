@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="register-card">
+        <h2>Register Here</h2>
+        
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"  placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" placeholder="Enter your mailId" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required >
+            </div>
+            <button onclick="registerapi()" class="register-btn">Register</button>
+            <p class="login-link">Already have an account? <a href="login.html">Sign in</a></p>
+        
+    </div>
+    <script>
+        async function registerapi(){
+    
+            let name1=document.getElementById("name").value;
+            let mail=document.getElementById("email").value;
+            let pass1 =document.getElementById("password").value;
+            
+
+            console.log(name1);
+            console.log(mail);
+            console.log(pass1);
+            let data={"Name": name1,"Mailid": mail,"Password":pass1};
+            let res=await fetch ("https://reqres.in/api/users",{"method":"POST",body:JSON.stringify(data),
+        headers:{"content-type":"application/json"}  });
+        
+        let json=await res.json();
+        console.log(json);
+        console.log(res);
+        
+        }
+       
+    </script>
+</body>
+</html>

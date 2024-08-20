@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshoot Booking</title>
+    <style>
+        body {
+    font-family: cursive Cambria;
+    margin-top: 0px;
+    padding: 0px;
+    
+}
+
+header {
+   background-color: rgb(20, 114, 197);
+    color: #df5757;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 0px;
+    
+}
+.bg{
+    position:relative;
+    text-align: center;
+}
+.text{
+    position: absolute;
+    left:80px;
+    bottom: 300px;
+    text-shadow:2px 2px 4px #df5757;
+   
+}
+.hang{
+    position: absolute;
+    top: 15px;
+    margin-left: 1010px; 
+    animation: swing 3s ease-in-out infinite;
+}
+
+.hang img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #333;
+    border-radius: 5px;
+    
+}
+
+@keyframes swing {
+    0% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+
+
+
+.logo img {
+    height: 70px;
+    width: auto;
+    border-radius: 45px;
+}
+
+.company-name {
+    margin-right: 570px;
+    font-family: 'Times New Roman';
+    color: rgb(255, 255, 255);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color:#ece0e0;   
+    border-radius: 5px;
+    opacity: 1.1;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+    </style>
+    
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="assignmentphoto/lg1.png" alt="Company Logo">
+        </div>
+        <h1 class="company-name"> PhotoSlot</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="bg"> 
+        <img src="assignmentphoto/ph1.jfif" alt="" style="width: auto;">
+           <div class="text">
+            <h1 style="font-size: 30px;color: red;">Let's transform your vision into<br> stunning reality,
+                 one click at a time.</h1>
+      </div>
+      <div class="hang">
+        <img src="assignmentphoto/ph2.jfif" alt="">
+      </div>
+        
+    </div>
+    
+           
+       
+
+   
+    <footer>
+        <p>&copy; PhotoSlot. All rights reserved.</p>
+    </footer>
+</body>
+</html>
