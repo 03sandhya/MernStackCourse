@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function Header(){
+export default function Header(props){
     
     return(
         /*
@@ -15,6 +15,7 @@ export default function Header(){
             <NavLink to="/home">Home</NavLink><br/>
             <NavLink to="/about">About</NavLink><br/>
             <NavLink to="/contact">Contact</NavLink><br/>
+            <span>Cryptop{props.currentPage}</span>
 
             
         </div>

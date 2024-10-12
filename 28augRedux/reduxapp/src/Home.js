@@ -22,7 +22,7 @@ export default function Home(){
     return(
         <div>
             <h1>HOME PAGE</h1>
-            
+            <Header currentPage="Home"></Header>
 
              <h1>{counterVal}</h1>
            {(status)? <p className="red">This is a paragraph</p>:null}
@@ -30,6 +30,7 @@ export default function Home(){
             <input type="button" onClick={()=>add()}value="Add"/><br></br><br></br>
             <input type="button" onClick={()=>sub()} value="Sub"/><br></br><br></br>
             <input type="button" onClick={()=>storeMyDetails()}value="storemydetails"/>
+            
 
             <Header/>
         </div>

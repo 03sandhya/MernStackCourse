@@ -1,0 +1,20 @@
+<html>
+    <script>
+        var client = new WebSocket('ws://localhost:8080/');
+        client.onerror = function(){
+            console.log('connection Error');
+        };
+        client.onopen = function(){
+            console.log('websocket client connected.......');
+        };
+        client.onclose = function(){
+            console.log('echo protocol client closed');
+        };
+        client.onmessage=function(e){
+            if(typeof e.data ==='string'){
+                console.log("Received: " + e.data + " ");
+            }
+        }
+    </script>
+    </script>
+</html>
