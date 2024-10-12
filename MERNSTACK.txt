@@ -1,0 +1,697 @@
+day 1 aug 7
+create 2 files Home.js,About.js in src folder
+simple javascript
+create browser router
+live server
+https://reqres.in/
+
+day 2  aug 8 (basic html tags)
+
+inline element(span), block element(entire browser widthdiv tag can contain another block)
+form tag send data to server, get & post
+dropdown using select tag
+ol,ul,anchor tag
+div,section,footer,header tags
+iframe tag- to have webpg within another web page(eg google ads)
+class(can have duplicates) , id (unique)
+p tag,article tag difference
+<div contenteditable="true">   makes editable , we can add css styles to our content, usecase: online  texteditor
+if we use textarea , we cannot apply css
+pre, code tags difference
+canvas tag(it need help of javascript)
+
+day3 -  github,git
+
+in git command prompt, do following code
+initialize git using ->git init
+git add . (any fle can be scanned or uploaded)
+git commit(modifications)
+git branch(only for long term project)(splitting project)
+ https://github.com/03sandhya/MernStackCourse.git
+
+refer screenshots for puhing uisng git command prompt
+
+using vs code pushing file to github
+click icon below search , three dot click commit and push, u can see file is pushed in github
+create a new file in github, three dot in vs code , click pull , it will come in local files
+other tools: guiclients, bitbucket
+
+day 4 -  css  (refer css folder, learncss.html file)
+
+display : none, visibility: hidden
+learn flex direction---->lap horizontal,mobile naa vertial
+class(have dupli),id(unique)
+tagname,class, id - 3 ways to apply css
+anchor tag given in list
+display flex both mob,lap 
+active property in anchor tag
+anchor tag adding more properties
+properties of css
+img tag
+<link rel="stylesheet" href="style.css"/>
+
+phone size ,lap size vary change color after 600 px
+ @media only screen and (max-width:600px) {
+        body{
+            background-color: blue;
+        }
+        
+       }
+
+
+DAY 5 (JAVASCRIPT)  (refer script1 &2 , javascriptbasics)
+
+let(redeclaration not possible eg using num1 and storing 2 values) ,
+ var, const(dont allow redeclaration and update the same variable) differeence
+
+javascript usecases
+document.getelementbyid - manipulate content,styles (definition)
+onclick, addeventlistener difference 
+array concepts (refer array.html)
+
+to do task : if textbox is empty add red  border,
+if it has values remove the red border
+this change should execute on button click
+
+DAY 6 (  ADVANCE JAVASCRIPT )  javascript folder
+
+es6 filter in javascript(interview que)  -->filter the data based on condtion
+map & filter  method will create new array , wont modify the old array
+map element go through each and every element and do modifiactions
+task to do : use array filter,map  use startswith
+server api integration
+using fetch method (ex for promise)
+promise in js (also in es6) --> wait  till it  get response
+http request methods --> get,post
+status codes refer   https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+ success code 200-299
+400-->client side error
+500-->internal server error
+//whenever u need to integrate restapi , 
+        //we should give url,method,data to br given to server which is optional
+
+postman  for testing api refer
+
+
+background-image: url('assignmentphoto/ph1.jfif');
+    background-repeat: no-repeat;
+    background-size: auto;
+
+
+API
+when u want to get data from server, api is used.
+api b/w client(device,browser) and server
+when u want to connect api, u need [url,method,type of data]
+[url,method,type of data] is needed in all prog lang
+promise (when u dont know actual time of task promise is used)  will wait till action is complted
+fetch( is one of the  method in promise)  is built based on promise.. wait till
+
+get-->get the data from server, visible in url, data is limited some 144 characters
+post-->we send data, no limitation,not visible in url   (mail,password use post method it is secured api, password is  sensitive data--interview)
+if u want to do file upload , use post method bcoz no limitation is here
+
+DATE 8      22/08/24
+class name and component name must be same as the file name
+we have to give npm start everytime to run our react app
+myapp>src>rightclick>newfile>Home.js create
+this file can't be used for another file if we did not export 
+export is a javascript keyword that will export so that our fn/ var can be used outside the Home.js
+now if we use  <Home/> in our App.js it will print the Home component h1 in website
+{} data binding
+normal react cant use let anbd var since it is not updateable to avoid this react came up with a soltion
+state variable. => whenever we update the var the react will refresh updation automatically
+This should be written in fn :
+
+const [varname , setVar]= useState('your varname value');
+{varname}
+<p><input type='text' placeholder='email' onChange={(e) => setEmail(e.target.value)}/><br></br><br></br>
+      <input type='text' placeholder='mobile' onChange={(e) => setMobile(e.target.value)}/><br></br><br></br>
+      <button>Click</button></p>
+the( e ) is current element or event element
+getter , setters:
+ create a validation like text box is empty throw warning
+add html into js so priority goes to js inside the main fn define another fn validate the newly added fn should be above the return 
+const valid =()=> {
+    
+  }
+
+task 
+create new app
+new component =>  Login.js
+email pass on button click if empty alert mesg show
+
+Day 9: 27.08.24
+in react to display in the webpage
+use state variable to print the value in the screen see for taskapp src register.js
+
+27aug
+
+function App() {
+  const [name,setName] = useState([ ])
+  const click = async() => {
+   
+      const response = await fetch(`https://api.restful-api.dev/objects?name=${name}`);
+      const data = await response.json();
+      console.log(data)
+{
+userList.map((obj,index)=>{
+  return(
+<div>
+<h1>{obj.first_name} </h1>
+</div>
+)
+})
+}
+
+
+
+day 10 (28august)
+
+REDUX
+npx create-react-app reduxapp
+npm i react-router-dom
+create Home.js,About.js,Contact.js
+
+day 11   29august
+
+<NavLink> tag will not refresh the app , but navigation will happen
+
+day 12  sept2
+node.js
+created Express folder
+open it
+cd Express
+npm init
+npm install express
+create mainfile.js
+var express=require("express")
+using express in our project/application
+ This line imports the Express module, which is a web framework for Node.js. 
+
+
+day 12  sept3
+
+ Inside mainfile.js....
+var express=require("express");
+var app=express();
+app.get("/myname", (req,res)=>{
+    res.json({"msg": "sandhya"});
+
+
+}) ;
+app.post("/myname", (req,res)=>{
+    res.json({"msg": "rose"});
+}) ;
+app.post("/login",(req,res)=>{
+    res.json({"msg":"login success"})
+})
+app.listen(8080,()=>{
+    console.log("server started");
+});
+
+to run nodejs program in terminal , give --> node mainfile.js
+give in browser to check outputlocalhost:8080/myname
+
+also give this link in postman to check api is working properly(mention get/post)
+//in nodejs,express we will see how to handle or catch the request ie restapi
+
+to run use hereafter-->node --watch mainfile.js
+if u use above code, no need to give again and again to run
+
+concept: destructuring in javascript
+let user={"email":"san@gmail.com","pass":"123"}
+let {email,pass}=user
+
+req['query']; 
+#get and post we can use
+#  if u this, data which is passed in url is visible...either postman or browser
+#check params in postman
+
+req.body -->used only in post method
+use app.use(express.json( ); //it is a middleware function , write  below the code , var app=express();
+one time configuration, no need to add multiple times
+
+check body-->raw in postman
+type the below code in postman
+{
+    "email":"sandhya@gmail.com", "name":"sandhya","address":"","pwd":""
+}
+type code in vs code
+let {name,email,pwd,address}=req.body;
+check output in postman
+
+4 september 2024
+
+C2yUnOYTrZeuK7Q9    mongodb pwd
+
+mongodb+srv://sandhya488495:C2yUnOYTrZeuK7Q9@cluster0.ajpou.mongodb.net/       database password
+
+npm install mongodb  in vs code terminal
+
+to run in terminal-->node mongodb_connect.js
+//sending data to
+1. req.body  send json(only post)
+2. query parameter
+3. path variable -->data passed along with url
+
+[
+        {"name":"bobyyy","email":"raja@gmail.com","password":"sand","address":"raja street","mobile":9245199741},
+    {"name":"sunny","email":"ravi@gmail.com","password":"san","address":"ravi street","mobile":9245199789},
+    {"name":"rose","email":"sri@gmail.com","password":"sa","address":"sridevi street","mobile":8945199741}
+    ]
+
+
+1.creating the product, 2.list the product,  3.listing -->product by name, product by price, price>amt
+  var express = require("express") 
+var app = express();
+app.use(express.json()); 
+const { MongoClient } = require('mongodb');
+// Connection URL
+const url = 'mongodb+srv://sandhya488495:C2yUnOYTrZeuK7Q9@cluster0.ajpou.mongodb.net/ ';
+const client = new MongoClient(url);
+// Database Name
+const dbName = 'staff';
+app.post("/createproduct",async(req,res)=>{
+    await client.connect();
+        let db = client.db(dbName);
+        await db.collection('products').insertMany(req.body);
+        res.status(200).json({"message":"Products inserted"})
+   })
+app.get("/listproducts",async(req,res)=>{
+
+    await client.connect();
+    let db = client.db(dbName);
+    let list = await db.collection("products").find({}).toArray();
+    res.status(200).json(list)
+   })
+app.get("/listproductname/:productname",async(req,res)=>{
+    await client.connect();
+    let {productname}=req.params;
+     let db = client.db(dbName);
+     let list = await db.collection("products").find({"productname":productname}).toArray();
+     res.status(200).json(list)
+})
+app.get("/listproductprice/:productprice",async(req,res)=>{
+    await client.connect();
+    let {productprice}=req.params;
+     let db = client.db(dbName);
+     let list = await db.collection("products").find({"productprice":productprice}).toArray();
+     res.status(200).json(list)
+})
+app.listen(3000,() => {
+    console.log("server started");
+});
+
+  
+link for android project : https://github.com/03sandhya/ExpenseTrackerMobile_app.git
+
+sep 9 
+test conducted 
+updateOne, deleteOne 
+
+sep 10
+
+get method, using id in mingodb printed values of particular product
+put , post methods --> updateOne
+created new folder jobportal also added main.js
+in that folder
+npm init
+npm i express mongodb
+
+sept 11
+sept 12
+
+try to learn what is micro frontend
+update, delete   using react
+
+sept 16,13 absent
+use only post method  for file upload
+
+//In postman.....  http://localhost:8080/upload
+//use post method , body--> form data,  key as img , choose file, select an img less than 500kb, click send
+//check uploads folder
+   
+ /*   app.use(fileUpload({
+    limits: { fileSize: 50 * 1024 * 1024 },
+  }));  */
+  
+https://www.npmjs.com/package/express-fileupload  ----installation
+
+
+
+sept 19
+
+localStorage.setItem("token",json['token'])
+
+
+The line localStorage.setItem("token", json['token']) is used to store a value (in this case, the token) in the local storage of the browser.
+
+Explanation:
+localStorage: It is a web storage mechanism that allows you to store key-value pairs in a web browser without an expiration time. Unlike sessionStorage, which is cleared when the page session ends, localStorage data persists even after the browser is closed and reopened.
+
+setItem("token", json['token']): This method is used to store data in the browser's localStorage. It takes two parameters:
+
+"token": The key under which the value will be stored. In this case, "token" is the key.
+json['token']: The value associated with the key. It assumes that json is an object, and you're accessing its token property to store it.
+Purpose:
+Store the token (likely an authentication token or JWT) locally in the browser for later use. This token can then be retrieved later to authenticate API requests, maintain user sessions, or manage access to protected resources.
+By storing the token in localStorage, the user stays logged in or authenticated even if they refresh the page or close the browser.
+
+//put the code in react app containing home,contact,about
+useEffect(()=>{
+    //login validation
+    let token = localStorage.getItem("token");
+    if(token== "" || token==undefined){
+       //login scrren
+       NavigationPreloadManager("/login")
+    }
+},[])   
+
+
+
+main.js mine
+var exp= require("express");
+var app=exp();
+app.use(exp.json()); 
+var jwt = require('jsonwebtoken');
+var fileUpload = require('express-fileupload');
+var cors=require("cors");
+app.use(cors());
+app.use(fileUpload({
+    limits: { fileSize: 50 * 1024 * 1024 },
+  }));  
+app.use('/api/',(req,res,next)=>{
+    //reading the header from the header
+    let {token} = req.headers;
+    if(token == "" || token == undefined){
+       res.json({"msg":"pls send the token"})
+    }else{
+       jwt.verify(token,'secret');
+    }
+    //console.log("I'm middleware");
+    next();
+ });
+const { MongoClient,ObjectId } = require('mongodb');
+// Connection URL
+const url = 'mongodb+srv://sandhya488495:C2yUnOYTrZeuK7Q9@cluster0.ajpou.mongodb.net/ ';
+const client = new MongoClient(url);
+// Database Name
+const dbName = 'jobportal';
+app.post("/createjob",async(req,res)=>{
+    var {name,companyname,requirements}=req.body;
+    await client.connect();
+    let db = client.db(dbName);
+    await db.collection("jobs").insertOne({"name":name,"companyname":companyname,"requirements":requirements});
+    res.json({"msg":"job created"})
+    //  note-->we cannot have another res.json()
+    //  to find a particular requirement from a name
+    //  let a = await db.collection("jobs").findOne({"name":"Hasika.B"});
+    //  console.log(a["requirements"][1]);
+    /*  in postman body give below code......
+     
+   {"name":"Sharmika","company_name":"SutherLand","requirements":["Problemsolving","MCA","Decision"] } 
+    */
+
+})
+//create many records
+app.post("/api/createManyJob",async(req,res)=>{
+    await client.connect();
+   let db = client.db(dbName);
+   await db.collection('jobs').insertMany(req.body);
+   res.status(200).json({"message":"Created a record"});
+})
+app.get("/getdetails",async(req,res)=>{
+    await client.connect();
+    let db = client.db(dbName);
+    let list=await db.collection("jobs").find({}).toArray();
+    res.status(200).json(list)
+})
+app.delete("/deletebyname",async(req,res)=>{
+    let {name}=req.query;
+    await client.connect();
+    let db = client.db(dbName);
+    let list=await db.collection("jobs").deleteOne({"name":name});
+    res.status(200).json({"msg":"name deleted"})
+    // http://localhost:8080/deletebyname?name=jaya
+})
+app.delete("/deletebyjob",async(req,res)=>{
+    let {id}=req.query;
+    await client.connect();
+    let db = client.db(dbName);
+    await db.collection("jobs").deleteOne({"_id":new ObjectId(id)})
+    res.status(200).json({"msg":" deleted"})
+})
+app.put("/updatedetails",async(req,res)=>{
+    let {name,companyname}=req.query;
+    await client.connect();
+    let db = client.db(dbName);
+    let list=await db.collection("jobs").updateOne({"name":name},{$set:{"companyname":companyname}});
+    res.status(200).json({"msg":"companyname updated"})
+})
+//update job based on ID
+app.post("/updatejobsbyid",async(req,res)=>{
+    let {id,name,companyname,requirements} = req.body;
+    await client.connect();
+    let db = client.db(dbName);
+    await db.collection("jobs").updateOne({"_id":new ObjectId(id)},{$set:{"name":name,"companyname":companyname,"requirements": requirements}});
+    res.json({"msg" :"jobs updated"});
+ })
+ app.post('/upload', function(req, res) {
+    let file = req.files.img; //same img(name) in postman, this is like constant, accesing file object
+    let uploadPath = __dirname + '/uploads/' + file.name;
+     //constant available in express, gives exact folder path of your  project
+     //upload is  foldername , file object . name->sample.jpg
+    file.mv(uploadPath,function(err){
+        //mv->moving file
+       if(err)
+          return res.status(500).send(err);
+       res.send("File uploaded!!")
+    })
+    
+  })
+  //login api check and create  a token 
+app.post("/login", async(req,res)=>{
+    let {email,password} = req.body;
+    await client.connect();
+    let db = client.db(dbName);
+    let loginRes = await db.collection("jobs").find({"email":email,"password":password}).toArray();
+ 
+    if(loginRes.length>0){
+       var token = jwt.sign({ 'name':loginRes[0]['name'] }, 'secret');
+          res.json({"msg":"you are correct","token": token});
+      }else{
+          res.status(400).json({"msg":"you are wrong"});
+      }
+ })
+ 
+//http://localhost:8080/upload
+//post method , body--> form data,  key as img , 
+//choose file, selxt on eimg less than 500kb click send
+//check uploads folder
+
+//multiple file upload
+//2 times img as key,array, put for loop( inside that write till return..)
+    //console.log(req.files.foo);
+ 
+ 
+
+   
+  
+
+
+app.listen(8080,()=>{
+    console.log("server started")
+})
+
+
+
+app.js sandhya
+
+import React, { useRef, useState } from 'react';
+
+
+function App() {
+  //to update ui with a dynamic data ie to print the output value in the webpage we need useState to store the data and display it in the webpage
+//const [jobList,setJobList] = useState(); 
+//creating a state var  
+//setJobList(json)
+ //displaying the state var
+const [joblist,setjoblist]=useState([]);
+const [id,setId]=useState([]);
+
+const nameRef=useRef();
+const cnameRef=useRef();
+const rnameRef = useRef();
+ 
+  const getData=async()=>{
+    let res=await fetch("http://localhost:8080/getdetails",{method:"GET"});
+    let json=await res.json();
+    console.log(json);
+    setjoblist(json);
+  }
+  const createjob=async()=>{
+    /* for giving  requirements as array 
+    let requirementsArray = rnameRef.current.value.split(',').map(req => req.trim());
+    let data = {
+      "name":nameRef.current.value,
+      "company_name":cnameRef.current.value,
+      "requirements":requirementsArray,
+    }*/
+    let data={"name":nameRef.current.value, 
+      "companyname": cnameRef.current.value,
+      "requirements": rnameRef.current.value,
+
+    };
+    let res=await fetch("http://localhost:8080/createjob",{method:"POST", body: JSON.stringify(data),
+      headers:{"content-type": "application/json"}});
+      let json= await res.json();
+      console.log(json);
+      getData();
+  }
+  const deletejob=async(id)=>{
+    let res=await fetch("http://localhost:8080/deletebyjob?id="+id, {"method":"delete"});
+    if(res.ok){
+      alert("deleted.......");
+    }else{
+      alert("Error while deleting")
+    }
+  }
+  const loaddataforupdate=(id)=>{
+    let matchjob=joblist.filter((j)=>id==j._id)
+    console.log(matchjob);
+    setId(id);
+    nameRef.current.value=matchjob[0].name;
+    cnameRef.current.value=matchjob[0].companyname;
+    rnameRef.current.value=matchjob[0].requirements;
+
+  }
+  const updatejob=async(id)=>{
+    let data={"id":id,"name":nameRef.current.value,"companyname":cnameRef.current.value}
+    let res=await fetch("http://localhost:8080/updatejobsbyid",{method:"POST", body: JSON.stringify(data),
+      headers:{"content-type": "application/json"}});
+      let json = await res.json();
+    console.log(json);
+    if(res.ok){
+      alert("Job updated");
+    }else{
+      alert("Error while updating!!!");
+    }
+    
+    
+    /*if(res.ok){
+      alert("updated.......");
+    }else{
+      alert("Error.....")
+    }   */
+
+  }
+  return (
+    <div>
+      {
+        joblist.map((obj,index)=>{
+          return(
+            <div key={index}>
+            <h6>{obj.name}</h6>
+            <button onClick={()=>deletejob(obj._id)}>Delete</button>
+            <button onClick={()=>loaddataforupdate(obj._id)}>update</button>
+          <h6>{obj.companyname}</h6>
+          <h6>{obj.requirements}</h6>
+
+          </div>
+          )
+          
+        })
+      }
+      <button onClick={getData}>get job list</button>
+      <div>
+        <h1>Create form</h1>
+        <div><input type ="name"  placeholder="NAME"  ref={nameRef}></input></div><br/><br/>
+        <div><input type ="name" placeholder="COMPANY NAME" ref={cnameRef}></input></div><br/><br/>
+        <div><input type ="name" placeholder="REQUIREMENT" ref={rnameRef}></input></div><br/><br/>
+        <div><input type ="button" value="Submit" onClick={createjob}></input></div>
+        <div><button onClick={updatejob}>makeupdate</button></div>
+      </div>
+      
+      
+    </div>
+  );
+}
+
+export default App;
+
+
+
+sept 20
+ only react application--> build process
+commandp-->npm run build  in terminal
+or search  pm2 in google-->for building
+
+in arrow function-->use or refer current obj, no need to write keyword function
+
+props--> sharing data to components from parent(home) to child(header)
+only props concept
+
+-->   one day file upload and multiple file upload concepts 
+npm i express-fileUpload
+
+
+23 september 2024
+  
+project - product review
+
+user module-->login,register,search product, can see other review, submit product with review
+admin-->login,product approval, comments review for approval
+product module--> can see review, can anyone search products, user submit the product with their review
+
+
+steps :
+step 1: Installation--->
+npx create-react-app reviewapp
+cd reviewapp
+npm start
+ npm install react-router-dom
+
+step2 
+remove code in app.js
+pages folder in src
+in pages directory create Home.js,Details.js,register.js,login.js,admin.js
+ AppConstants.js in src
+
+
+sept 25
+pagination--> means 1000 products wont be loaded, only 10 products
+skip(2) --.skip the 2 record
+limit(10) --first 10 records
+exception handling 
+ try{
+ let {email.pwd}=req.body;
+res.json({"msg":"login test"})
+ }
+catch(e) {
+res.status
+}
+
+
+sept 26
+sir github link -->https://github.com/programmerpraveenkumar/vaishnav_college_2024/tree/master/producto-review
+unit testing concept
+sonarqube--> website --> for testing check screenshots of that in google , nondeveloper can understand test case is passed or not
+Apptest.js  -->write test  code
+for deployment , use render.com by creating account
+
+
+sept 27
+Websocket topic
+http req, web socket difference interview question
+without request, u can get response  but we should connect to server
+eg score updated in cricket
+live data showing
+http raise req, then res
+
+deployment process
+https://github.com/03sandhya/deployment.git
+CI/CD continuous integration,continuous deployment
+
+
+
+
